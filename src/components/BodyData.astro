@@ -1,0 +1,71 @@
+---
+import { COMPANIES } from "../data/companies";
+
+interface Company {
+  name: string;
+  category: string;
+  description: string;
+  facebook: string;
+  instagram: string;
+  twitter: string;
+  linkedin: string;
+  careers: string;
+  city: string;
+}
+---
+
+<div class="company-grid">
+  {
+    [...COMPANIES]
+      .sort((a, b) => a.name.localeCompare(b.name))
+      .map(({ name, city, description, careers, facebook }: Company) => (
+        <div class="company-card">
+          <img
+            class="logo-sizing"
+            src={`logos/${name.toLocaleLowerCase()}.jpg`}
+            alt={`${name} Logo`}
+          />
+          <h2>{name}</h2>
+          <p class="lead-city">{city}</p>
+          <p class="description-copy">{description}</p>
+          <a href={careers} target="_blank" rel="noopener noreferrer">
+            {name} Careers Page
+          </a>
+        </div>
+      ))
+  }
+</div>
+
+<style>
+  .company-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 0.5rem;
+  }
+  .company-card {
+    border: 0.003rem dashed #88a8c98f;
+    padding: 0.2rem 1rem 1.5rem 1rem;
+    border-radius: 7px;
+    background-color: white;
+  }
+
+  .logo-sizing {
+    height: 2.5rem; /* Tailwind h-10: 40px */
+    width: 2.5rem; /* Tailwind w-10: 40px */
+    max-width: 2.5rem; /* Tailwind max-w-10: 40px */
+    border-radius: 9999px; /* Tailwind rounded-full */
+  }
+
+  h2 {
+    margin-bottom: 0.25rem;
+  }
+
+  .lead-city {
+    margin: 0.25rem 0rem 0.5rem;
+    color: #757575;
+  }
+
+  .description-copy {
+    font-size: 0.8rem;
+  }
+</style>
