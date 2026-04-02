@@ -4,9 +4,11 @@
 
 ## Original project by Lee Robinson
 
-- [org github repo](https://github.com/leerob/dsmtech)
+- [orginal github repo](https://github.com/leerob/dsmtech)
 - [leerob](https://leerob.com/)
 
 ### Migrated to and Built Using
 
 - [Astro](https://astro.build/)
+
+This is a simplification & migration project. It's not meant to replace the original project.
