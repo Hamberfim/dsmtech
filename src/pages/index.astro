@@ -1,0 +1,28 @@
+---
+import BodyData from "../Components/BodyData.astro";
+import { Font } from "astro:assets";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body>
+    <h1>dsmtech</h1>
+    <BodyData />
+  </body>
+</html>
+
+<!-- implement custom font TODO: move to global or Header Component -->
+<Font cssVariable="--font-roboto" preload />
+<style is:global>
+  body {
+    font-family: var(--font-roboto);
+    background-color: #f3f4f6;
+  }
+</style>

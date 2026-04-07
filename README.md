@@ -2,8 +2,14 @@
 
 > The best tech companies and startups in the Greater Des Moines area.
 
-### Built Using
+## Original project by Lee Robinson
 
-- [Next.js](https://nextjs.org/)
-- [Tailwind CSS](https://tailwindcss.com)
-- [Vercel](https://vercel.com)
+- [orginal github repo](https://github.com/leerob/dsmtech)
+- [leerob](https://leerob.com/)
+
+### Migrated to and Built Using
+
+- [Astro](https://astro.build/)
+- [About Me](https://www.linkedin.com/in/adhamlin/)
+
+This is a simplification & migration project. It's not meant to replace the original project.
