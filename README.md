@@ -1,5 +1,4 @@
-# 🚀 dsmtech.io
-
+# 🚀 dsmtech
 > The best tech companies and startups in the Greater Des Moines area.
 
 ## Original project by Lee Robinson
