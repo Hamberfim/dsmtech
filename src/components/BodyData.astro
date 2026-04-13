@@ -13,7 +13,7 @@ interface Company {
   city: string;
 }
 // company names have a space while logo names have underscores for the space
-const formatCompanyNameToLogoName = (name) =>
+const formatCompanyNameToLogoName = (name: string) =>
   name.replace(/ /g, "_").toLowerCase();
 ---
 
@@ -47,7 +47,7 @@ const formatCompanyNameToLogoName = (name) =>
                 {name} Careers
               </a>
             </p>
-            {/* FACEBOOK */}
+            {/* SOCIAL ICON LINKS */}
             <p>
               {/* FACEBOOK */}
               {facebook.length > 0 ? (
@@ -55,6 +55,7 @@ const formatCompanyNameToLogoName = (name) =>
                   href={`https://www.facebook.com/${facebook}`}
                   target="_blank"
                   rel="noopener noreferrer"
+                  class="social-icons"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -68,15 +69,15 @@ const formatCompanyNameToLogoName = (name) =>
                     />
                   </svg>
                 </a>
-              ) : (
-                <span>No Facebook profile</span>
-              )}
+              ) : // <span>No Facebook profile</span>
+              null}
               {/* INSTAGRAM */}
               {instagram.length > 0 ? (
                 <a
                   href={`https://www.instagram.com/${instagram}`}
                   target="_blank"
                   rel="noopener noreferrer"
+                  class="social-icons"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -90,15 +91,15 @@ const formatCompanyNameToLogoName = (name) =>
                     />
                   </svg>
                 </a>
-              ) : (
-                <span>No Instagram profile</span>
-              )}
+              ) : // <span>No Instagram profile</span>
+              null}
               {/* TWITTER */}
               {twitter.length > 0 ? (
                 <a
                   href={`https://www.twitter.com/${twitter}`}
                   target="_blank"
                   rel="noopener noreferrer"
+                  class="social-icons"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -112,15 +113,15 @@ const formatCompanyNameToLogoName = (name) =>
                     />
                   </svg>
                 </a>
-              ) : (
-                <span>No Twitter profile</span>
-              )}
+              ) : // <span>No Twitter profile</span>
+              null}
               {/* linkedin */}
               {linkedin.length > 0 ? (
                 <a
                   href={`https://www.linkedin.com/company/${linkedin}`}
                   target="_blank"
                   rel="noopener noreferrer"
+                  class="social-icons"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -134,9 +135,8 @@ const formatCompanyNameToLogoName = (name) =>
                     />
                   </svg>
                 </a>
-              ) : (
-                <span>No Linkedin profile</span>
-              )}
+              ) : // <span>No Linkedin profile</span>
+              null}
             </p>
           </div>
         ),
@@ -177,5 +177,10 @@ const formatCompanyNameToLogoName = (name) =>
 
   .description-copy {
     font-size: 0.8rem;
+  }
+
+  /* over-ride webkit-link */
+  a.social-icons {
+    text-decoration: none;
   }
 </style>
