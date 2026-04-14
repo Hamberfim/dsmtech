@@ -9,6 +9,6 @@
 ### Migrated to and Built Using
 
 - [Astro](https://astro.build/)
-- [About Me](https://www.linkedin.com/in/adhamlin/)
+- [hamberfim](https://www.linkedin.com/in/adhamlin/)
 
 This is a simplification & migration project. It's not meant to replace the original project.
